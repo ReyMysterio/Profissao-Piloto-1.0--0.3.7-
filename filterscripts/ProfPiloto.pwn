@@ -51,15 +51,6 @@ public OnPlayerDisconnect(playerid, reason)
 	return 1;
 }
 
-public OnPlayerSpawn(playerid)
-{
-	for(new i = 0; i < 100; i++)
-	{
-		SendClientMessage(playerid, -1, " ");
-	}
-	return 1;
-}
-
 public OnPlayerEnterRaceCheckpoint(playerid)
 {
 	if(DecolouPiloto[playerid] == 1)
