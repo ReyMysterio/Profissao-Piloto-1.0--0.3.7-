@@ -57,14 +57,14 @@ public OnPlayerEnterRaceCheckpoint(playerid)
 	{
 		TogglePlayerControllable(playerid, 0);
 		GameTextForPlayer(playerid, "~r~Descarregando Passageiros Aguarde...", 15000, 3);
-		SetTimerEx("DescongelarPlayerPilotoLV", 15000, false, "u", playerid);
+		SetTimerEx("DescongelarPlayerPilotoLV", 15000, false, "i", playerid);
 		return 1;
 	}
 	if(DecolouPiloto[playerid] == 2)
 	{
 		TogglePlayerControllable(playerid, 0);
 		GameTextForPlayer(playerid, "~r~Descarregando Passageiros Aguarde...", 15000, 3);
-		SetTimerEx("DescongelarPlayerPilotoSF", 15000, false, "u", playerid);
+		SetTimerEx("DescongelarPlayerPilotoSF", 15000, false, "i", playerid);
 		return 1;
 	}
 	return 1;
@@ -191,7 +191,7 @@ forward CarregarPessoasLV(playerid);
 public CarregarPessoasLV(playerid)
 {
 	PessoasPiloto[playerid]++;
-	format(String, sizeof(String), "Foi carregado %d pessoa(s)!", PessoasPiloto[playerid]);
+	format(String, sizeof(String), "Entrou %d pessoa(s)!", PessoasPiloto[playerid]);
 	SendClientMessage(playerid, C_PILOTO, String);
 	if(PessoasPiloto[playerid] >= 10)
 	{
@@ -210,7 +210,7 @@ forward CarregarPessoasSF(playerid);
 public CarregarPessoasSF(playerid)
 {
 	PessoasPiloto[playerid]++;
-	format(String, sizeof(String), "Foram carregas %d pessoa(s)!", PessoasPiloto[playerid]);
+	format(String, sizeof(String), "Entrou %d pessoa(s)!", PessoasPiloto[playerid]);
 	SendClientMessage(playerid, C_PILOTO, String);
 	if(PessoasPiloto[playerid] >= 10)
 	{
