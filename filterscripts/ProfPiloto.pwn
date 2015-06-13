@@ -97,7 +97,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 					SendClientMessage(playerid, C_PILOTO, "Se quiser decolar antes digite {FF0000}/Decolagem{7FFFD4}.");
 					ViagemPiloto[playerid] = 2;
 					PessoasPiloto[playerid] = 0;
-					TimerPilotoSF[playerid] = SetTimerEx("CarregarPessoasSF", 10000, true, "id", playerid);
+					TimerPilotoSF[playerid] = SetTimerEx("CarregarPessoasSF", 10000, true, "i", playerid);
 					return 1;
 				}
 			}
